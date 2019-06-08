@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Auth::routes();
+
+Route::view('/home', 'auth.login');
+
+Route::group(['prefix' => 'operador', 'middleware' => ['role:operador']], function() {
+    Route::view('/admin', 'roles.operador.v_oper');
+});
+Route::group(['prefix' => 'usuario', 'middleware' => ['role:usuario']], function() {
+    Route::view('/usr', 'roles.usuario.v_usr');
 });
