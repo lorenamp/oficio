@@ -55,7 +55,7 @@
                 <li class="dropdown dropdown-user">
                     <a class="dropdown-toggle" data-toggle="dropdown">
                         <img src="assets/images/placeholder.jpg" alt="">
-                        <span></span>
+                        <span>Victoria</span>
                         <i class="caret"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
@@ -64,6 +64,10 @@
                 </li>
             </ul>
         </div>
+
+
+
+
     </div>
 </div>
 <!-- /main navbar -->
@@ -83,7 +87,7 @@
                         <div class="media">
                             <a href="#" class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
                             <div class="media-body">
-                                <span class="media-heading text-semibold">Bienvenido</span>
+                                <span class="media-heading text-semibold">Victoria</span>
                             </div>
                         </div>
                     </div>
@@ -95,19 +99,30 @@
                         <ul class="navigation navigation-main navigation-accordion">
                             <!-- Main -->
                             <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-                            <li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li><!-- /forms -->
+                            <li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li>
+
+                            <li>
+                                <a href="#"><i class="icon-stack2"></i> <span>Detalles de Oficio</span></a>
+                                <ul>
+                                    <li><a href="layout_navbar_fixed.html">Listado</a></li>
+                                    <li><a href="layout_navbar_sidebar_fixed.html">Detalle de Oficio</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-copy"></i> <span>Estatus</span></a>
+                                <ul>
+                                    <li><a href="../../../layout_1/LTR/index.html" id="layout1">Oficio</a></li>
+                                </ul>
+                            </li>
+                            <!-- /main -->
+                            <!-- Forms -->
+                            <!-- /forms -->
 
                         </ul>
                     </div>
                 </div>
                 <!-- /main navigation -->
-                <li class="active"><a href="{{route('home')}}"><i class="icon-home position-left"></i> Inicio</a></li>
-                @role('operador')
-                <li><a href="{{url('/Operador')}}"><i class="icon-pencil3"></i> Operador</a></li>
-                @endrole
-                @role('usuario')
-                <li><a href="{{url('/Usuario')}}"><i class="icon-barcode2"></i> Usuario</a></li>
-                @endrole
+
             </div>
         </div>
         <!-- /main sidebar -->
@@ -116,8 +131,8 @@
         <!-- Main content -->
         <div class="content-wrapper">
             <div class="content">
-                @yield('contenido')
-            </div>
+            @yield('contenido')
+        </div>
         </div>
         <!-- /main content -->
 
